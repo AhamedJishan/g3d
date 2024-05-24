@@ -3,12 +3,23 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Binaries and intermediate files
+bin/
+bin-int/
+
+# premake binaries
+vendor/bin/premake/
+
 # User-specific files
 *.rsuser
 *.suo
 *.user
 *.userosscache
+*.sln
 *.sln.docstates
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
