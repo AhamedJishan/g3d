@@ -24,6 +24,11 @@ project "g3d"
         "%{prj.name}/include"
     }
 
+    filter "system:windows"
+		cppdialect "C++17"
+		staticruntime "On"
+		systemversion "latest"
+
     filter "configurations:Debug"
         symbols "On"
     
@@ -52,6 +57,11 @@ project "g3d_test"
     {
         "g3d"
     }
+
+    filter "system:windows"
+		cppdialect "C++17"
+		staticruntime "On"
+		systemversion "latest"
 
     filter "configurations:Debug"
         symbols "On"

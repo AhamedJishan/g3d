@@ -15,11 +15,7 @@ vendor/bin/premake/
 *.suo
 *.user
 *.userosscache
-*.sln
 *.sln.docstates
-*.vcxproj
-*.vcxproj.filters
-*.vcxproj.user
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
