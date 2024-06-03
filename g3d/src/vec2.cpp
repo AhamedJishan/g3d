@@ -1,4 +1,4 @@
-#include "g3d/vector.h"
+#include "g3d/vec2.h"
 
 #include <cmath>
 
@@ -37,6 +37,16 @@ namespace g3d
 		v.x = x / m;
 		v.y = y / m;
 		return v;
+	}
+
+	float vec2::dot(const vec2& other) const
+	{
+		return x * other.x + y * other.y;
+	}
+
+	float vec2::cross(const vec2& other) const
+	{
+		return x * other.y - y * other.x;
 	}
 
 	std::ostream& operator<<(std::ostream& os, const vec2& vec)

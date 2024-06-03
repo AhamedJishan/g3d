@@ -39,7 +39,7 @@ public:
 		}
 
 		std::cout << "\n-----------------------------------------------------\n";
-		std::cout << "Test Summary: " << passed << "passed, " << failed << "failed.\n";
+		std::cout << "Test Summary: " << passed << " passed, " << failed << " failed.\n";
 		std::cout << "-----------------------------------------------------\n";
 	}
 

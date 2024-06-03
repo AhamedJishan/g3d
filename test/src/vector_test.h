@@ -1,7 +1,7 @@
 #pragma once
 
 #include "test.h"
-#include "g3d/vector.h"
+#include "g3d/vec2.h"
 
 
 using namespace g3d;
@@ -95,6 +95,21 @@ public:
 
 				if (!isAlmostEqual(m, expectedResult)) {
 					throw std::runtime_error("Normalization test failed!");
+				}
+			});
+	}
+
+	void dotProductTest(const vec2& v1, const vec2& v2, const float expectedResult)
+	{
+		addTestCase("Dot Product Test", [v1, v2, expectedResult]()
+			{
+				float result = vec2::dot(v1, v2);
+
+				std::cout << v1 << " . " << v2 << " = ";
+				std::cout << result << "\n";
+
+				if (result != expectedResult) {
+					throw std::runtime_error("Dot Product test failed!");
 				}
 			});
 	}

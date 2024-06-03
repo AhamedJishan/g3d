@@ -15,6 +15,8 @@ int main() {
 
     test.magnitudeTest(vec2(3.0f, 4.0f), 5.0f);
 
+    test.dotProductTest(vec2(3, 4), vec2(2, -1), 2);
+
     // Run all tests
     test.run();
 

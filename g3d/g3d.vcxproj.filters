@@ -12,12 +12,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\g3d\vector.h">
-      <Filter>include\g3d</Filter>
-    </ClInclude>
+    <ClInclude Include="include\g3d\vec2.h" />
+    <ClInclude Include="include\g3d\vec3.h" />
+    <ClInclude Include="include\g3d\vec4.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\vector.cpp">
+    <ClCompile Include="src\vec2.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
