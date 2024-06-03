@@ -116,7 +116,7 @@ public:
 
 	void crossProductTest(const vec2& v1, const vec2& v2, const float expectedResult)
 	{
-		addTestCase("Dot Product Test", [v1, v2, expectedResult]()
+		addTestCase("Cross Product Test", [v1, v2, expectedResult]()
 			{
 				float result = vec2::cross(v1, v2);
 
@@ -124,7 +124,7 @@ public:
 				std::cout << result << "\n";
 
 				if (result != expectedResult) {
-					throw std::runtime_error("Dot Product test failed!");
+					throw std::runtime_error("Cross Product test failed!");
 				}
 			});
 	}

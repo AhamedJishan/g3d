@@ -12,8 +12,8 @@ namespace g3d
 		float x, y;
 
 		// @brief Constructs a Vec2 object with the specified coordinates.
-		// @param X: The x-coordinate of the vector. Default is 0.0f.
-		// @param Y: The y-coordinate of the vector. Default is 0.0f.
+		// @param X: The x element of the vector. Default is 0.0f.
+		// @param Y: The y element of the vector. Default is 0.0f.
 		// @details This constructor initializes a Vec2 object with the given coordinates.
 		// If no coordinates are provided, the default values are (0.0f, 0.0f).
 		vec2(float X = 0.0f, float Y = 0.0f)
@@ -50,7 +50,7 @@ namespace g3d
 		// Calculated as: dot = x1 * x2 + y1 * y2
 		static float dot(const vec2& A, const vec2& B)
 		{
-			return A.x * B.x + A.y * B.y;
+			return (A.x * B.x) + (A.y * B.y);
 		}
 
 		// @brief Computes the cross product of this vec2 with another vec2. (Note: In 2D vectors

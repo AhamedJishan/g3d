@@ -20,5 +20,6 @@
     <ClCompile Include="src\vec2.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\vec3.cpp" />
   </ItemGroup>
 </Project>

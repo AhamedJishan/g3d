@@ -101,6 +101,7 @@
   <ItemGroup>
     <ClInclude Include="src\test.h" />
     <ClInclude Include="src\vec2_test.h" />
+    <ClInclude Include="src\vec3_test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
