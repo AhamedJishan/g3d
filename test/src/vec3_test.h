@@ -69,6 +69,51 @@ public:
 			});
 	}
 
+	void equalityTest(const vec3& v1, const vec3& v2, const bool expectedResult)
+	{
+		addTestCase("Equality Test", [v1, v2, expectedResult]()
+			{
+				bool result = v1 == v2;
+
+				std::cout << v1 << " == " << v2 << " = ";
+				std::cout << (result ? "true" : "false") << "\n";
+
+				if (result != expectedResult) {
+					throw std::runtime_error("Equality test failed!");
+				}
+			});
+	}
+
+	void lessThanOrEqualTest(const vec3& v1, const vec3& v2, const bool expectedResult)
+	{
+		addTestCase("Less than or equal Test", [v1, v2, expectedResult]()
+			{
+				bool result = v1 <= v2;
+
+				std::cout << v1 << " <= " << v2 << " = ";
+				std::cout << (result ? "true" : "false") << "\n";
+
+				if (result != expectedResult) {
+					throw std::runtime_error("Less than or equal test failed!");
+				}
+			});
+	}
+
+	void greaterThanOrEqualTest(const vec3& v1, const vec3& v2, const bool expectedResult)
+	{
+		addTestCase("Greater than or equal Test", [v1, v2, expectedResult]()
+			{
+				bool result = v1 >= v2;
+
+				std::cout << v1 << " >= " << v2 << " = ";
+				std::cout << (result ? "true" : "false") << "\n";
+
+				if (result != expectedResult) {
+					throw std::runtime_error("Greater than or equal test failed!");
+				}
+			});
+	}
+
 	void normalizationTest(const vec3& v, const vec3& expectedResult)
 	{
 		addTestCase("Normalization Test", [v, expectedResult, this]()

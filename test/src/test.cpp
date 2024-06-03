@@ -24,6 +24,10 @@ void test_vec2()
 
     test.scalarDivisionTest(vec2(4.0f, 6.0f), 2, vec2(2.0f, 3.0f));
 
+    test.equalityTest(vec2(-2, 3), vec2(-2.0f, 3.0), true);
+
+    test.greaterThanOrEqualTest(vec2(2, 3), vec2(-2.0f, -3.4), false);
+
     test.normalizationTest(vec2(3.0f, 4.0f), vec2(0.6f, 0.8f));
 
     test.magnitudeTest(vec2(3.0f, 4.0f), 5.0f);
@@ -47,6 +51,10 @@ void test_vec3()
     test.scalarMultiplicationTest(vec3(2.0f, 3.0f, 4.0f), 2, vec3(4.0f, 6.0f, 8.0f));
 
     test.scalarDivisionTest(vec3(4.0f, 6.0f, 8.0f), 2, vec3(2.0f, 3.0f, 4.0f));
+
+    test.equalityTest(vec3(-2, 3, 1), vec3(-2.0f, 3.0, 1), true);
+
+    test.greaterThanOrEqualTest(vec3(2, 3, 1), vec3(-2.0f, -3.4, -1), false);
 
     test.normalizationTest(vec3(3.0f, 4.0f, 5.0f), vec3(0.424264f, 0.565685f, 0.707107f));
 
