@@ -6,7 +6,7 @@
 
 using namespace g3d;
 
-class VectorTest : public test
+class Vec2Test : public test
 {
 public:
 	void additionTest(const vec2& v1, const vec2& v2, const vec2& expectedResult)

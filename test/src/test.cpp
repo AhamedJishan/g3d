@@ -1,7 +1,7 @@
-#include "vector_test.h"
+#include "vec2_test.h"
 
 int main() {
-    VectorTest test;
+    Vec2Test test;
 
     test.additionTest(vec2(1.0f, 2.0f), vec2(3.0f, 4.0f), vec2(4.0f, 6.0f));
 
