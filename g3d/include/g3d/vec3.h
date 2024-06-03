@@ -120,6 +120,13 @@ namespace g3d
 			if (scalar == 0) return vec3(x, y);
 			return vec3(x / scalar, y / scalar, z / scalar);
 		}
+		// Logical operator overload
+		inline bool vec3::operator == (const vec3& other) const { return (x == other.x) && (y == other.y) && (z == other.z); }
+		inline bool vec3::operator != (const vec3& other) const { return !(*this == other); }
+		inline bool vec3::operator <  (const vec3& other) const { return (sqrMagnitude() < other.sqrMagnitude()); }
+		inline bool vec3::operator <= (const vec3& other) const { return (sqrMagnitude() <= other.sqrMagnitude()); }
+		inline bool vec3::operator >  (const vec3& other) const { return (sqrMagnitude() > other.sqrMagnitude()); }
+		inline bool vec3::operator >= (const vec3& other) const { return (sqrMagnitude() >= other.sqrMagnitude()); }
 
 		friend std::ostream& operator<<(std::ostream& os, const vec3& vec);
 	};

@@ -83,9 +83,9 @@ namespace g3d
 
 
 		// Arithemetical operator overloads
-		inline vec2 vec2::operator+(const vec2& other) const { return vec2(x + other.x, y + other.y); }
-		inline vec2 vec2::operator-(const vec2& other) const { return vec2(x - other.x, y - other.y); }
-		inline vec2 vec2::operator*(const float scalar) const
+		inline vec2 vec2::operator + (const vec2& other) const { return vec2(x + other.x, y + other.y); }
+		inline vec2 vec2::operator - (const vec2& other) const { return vec2(x - other.x, y - other.y); }
+		inline vec2 vec2::operator * (const float scalar) const
 		{
 			if (scalar == 0) return vec2(x, y);
 			return vec2(x * scalar, y * scalar);
@@ -95,6 +95,13 @@ namespace g3d
 			if (scalar == 0) return vec2(x, y);
 			return vec2(x / scalar, y / scalar);
 		}
+		// Logical operator overload
+		inline bool vec2::operator == (const vec2& other) const { return (x == other.x) && (y == other.y); }
+		inline bool vec2::operator != (const vec2& other) const { return (x != other.x) || (y != other.y); }
+		inline bool vec2::operator <  (const vec2& other) const { return (sqrMagnitude() <  other.sqrMagnitude()); }
+		inline bool vec2::operator <= (const vec2& other) const { return (sqrMagnitude() <= other.sqrMagnitude()); }
+		inline bool vec2::operator >  (const vec2& other) const { return (sqrMagnitude() >  other.sqrMagnitude()); }
+		inline bool vec2::operator >= (const vec2& other) const { return (sqrMagnitude() >= other.sqrMagnitude()); }
 
 		friend std::ostream& operator<<(std::ostream& os, const vec2& vec);
 	};
