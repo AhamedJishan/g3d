@@ -17,6 +17,8 @@ int main() {
 
     test.dotProductTest(vec2(3, 4), vec2(2, -1), 2);
 
+    test.crossProductTest(vec2(2, 3), vec2(-1, 2), 7);
+
     // Run all tests
     test.run();
 
