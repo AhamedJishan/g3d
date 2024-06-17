@@ -91,11 +91,13 @@
   <ItemGroup>
     <ClInclude Include="include\g3d\g3d.h" />
     <ClInclude Include="include\g3d\mat3.h" />
+    <ClInclude Include="include\g3d\transformations.h" />
     <ClInclude Include="include\g3d\vec2.h" />
     <ClInclude Include="include\g3d\vec3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mat3.cpp" />
+    <ClCompile Include="src\transformations.cpp" />
     <ClCompile Include="src\vec2.cpp" />
     <ClCompile Include="src\vec3.cpp" />
   </ItemGroup>
