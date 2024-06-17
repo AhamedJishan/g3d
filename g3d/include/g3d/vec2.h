@@ -8,8 +8,15 @@ namespace g3d
 	class vec2
 	{
 	public:
-		// Elements of vec2
-		float x, y;
+		union
+		{
+			struct
+			{
+				float x, y;					// Elements of vec3
+			};
+
+			float raw[2];					// Float array of x, y, z elements
+		};
 
 		// @brief Constructs a Vec2 object with the specified coordinates.
 		// @param X: The x element of the vector. Default is 0.0f.

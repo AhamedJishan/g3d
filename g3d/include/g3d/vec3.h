@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <assert.h>
 
 namespace g3d
 {
@@ -8,8 +9,16 @@ namespace g3d
 	class vec3
 	{
 	public:
-		// Elements of vec3
-		float x, y, z;
+		union
+		{
+			struct
+			{
+				float x, y, z;					// Elements of vec3
+			};
+
+			float raw[3];						// Float array of x, y, z elements
+		};
+		
 
 		/*
 		* @brief Constructs a Vec3 object with the specified coordinates.
@@ -17,7 +26,6 @@ namespace g3d
 		* @param Y: The y element of the vector. Default is 0.0f.
 		* @param Z: The z element of the vector. Default is 0.0f.
 		* @details This constructor initializes a Vec3 object with the given coordinates.
-		* If no coordinates are provided, the default values are (0.0f, 0.0f).
 		*/
 		vec3(float X = 0.0f, float Y = 0.0f, float Z = 0.0f)
 			: x(X), y(Y), z(Z) {}
