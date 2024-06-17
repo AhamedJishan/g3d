@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#include "vec3.h"
+#include "g3d/vec3.h"
 
 namespace g3d
 {

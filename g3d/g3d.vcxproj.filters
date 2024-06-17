@@ -16,7 +16,6 @@
     <ClInclude Include="include\g3d\vec3.h" />
     <ClInclude Include="include\g3d\mat3.h" />
     <ClInclude Include="include\g3d\g3d.h" />
-    <ClInclude Include="include\g3d\transformations.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\vec2.cpp">
@@ -24,6 +23,5 @@
     </ClCompile>
     <ClCompile Include="src\vec3.cpp" />
     <ClCompile Include="src\mat3.cpp" />
-    <ClCompile Include="src\transformations.cpp" />
   </ItemGroup>
 </Project>

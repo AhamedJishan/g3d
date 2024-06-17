@@ -1,4 +1,5 @@
 #include "g3d/mat3.h"
+#include "g3d/vec3.h"
 
 namespace g3d
 {
@@ -41,7 +42,8 @@ namespace g3d
 		{
 			for (int j = 0; j < 3; j++)
 			{
-				if (i == j) m_data[i][i] = vec.raw[i];
+				if (i == j) m_data[i][j] = vec.raw[i];
+				else m_data[i][j] = 0;
 			}
 		}
 	}
@@ -93,9 +95,9 @@ namespace g3d
 		return mat;
 	}
 
-	mat3 mat3::operator*(const mat3& G) const
+	mat3 mat3::operator*(const mat3& other) const
 	{
-		mat3 FG;
+		mat3 mat;
 
 		for (int index = 0; index < 9; index++)
 		{
@@ -104,11 +106,11 @@ namespace g3d
 
 			for (int k = 0; k < 3; k++)
 			{
-				FG(i, j) += this->at(i, k) * G(k, j);
+				mat(i, j) += this->at(i, k) * other(k, j);
 			}
 		}
 
-		return FG;
+		return mat;
 	}
 
 	bool mat3::operator==(const mat3& M) const

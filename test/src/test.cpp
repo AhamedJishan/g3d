@@ -1,3 +1,5 @@
+#include "g3d/g3d.h"
+
 #include "vec2_test.h"
 #include "vec3_test.h"
 #include "mat3_test.h"
@@ -10,6 +12,9 @@ void test_mat3();
 
 int main()
 {
+    mat3 mat(2);
+    mat = scale(mat, vec3(1,2,3));
+
     test_mat3();
 
     return 0;
