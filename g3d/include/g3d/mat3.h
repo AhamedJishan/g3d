@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "vec3.h"
+
 namespace g3d
 {
 	// A 3x3 matrix
@@ -20,6 +22,9 @@ namespace g3d
 
 		// mat3 Constructor constructing a matrix from the given 2D Array
 		mat3(const float value[3][3]);
+
+		// mat3 Constructor for constructing a diagonal matrix with the given vec3
+		mat3(const vec3& vec);
 
 		/**
 		* @brief Accesses the element at the specified row and column of the matrix.
@@ -58,7 +63,6 @@ namespace g3d
 		*/
 		float& operator() (int row, int col) { return m_data[row][col]; }
 		float operator() (int row, int col) const { return m_data[row][col]; }
-
 		
 		mat3 operator+(const mat3& other) const;
 		mat3 operator-(const mat3& other) const;

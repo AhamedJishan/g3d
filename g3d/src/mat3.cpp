@@ -35,6 +35,18 @@ namespace g3d
 		}
 	}
 
+	mat3::mat3(const vec3& vec)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				if (i == j) m_data[i][i] = vec.raw[i];
+			}
+		}
+	}
+
+
 	mat3 mat3::operator+(const mat3& other) const
 	{
 		mat3 mat;
@@ -119,12 +131,12 @@ namespace g3d
 
 	std::ostream& operator<<(std::ostream& os, const mat3& mat)
 	{
-		os << "{ ";
+		os << "{";
 		for (int i = 0; i < 3; i++)
 		{
 			os << "(" << mat(i,0) << ", " << mat(i, 1) << ", " << mat(i, 2) << "), ";
 		}
-		os << "\b\b }";
+		os << "\b\b}";
 		return os;
 	}
 
