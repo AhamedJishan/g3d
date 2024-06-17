@@ -75,6 +75,8 @@ void test_mat3()
 {
     Mat3Test test;
 
+    test.matrixAdditionTest(mat3(4), mat3(3), mat3(7));
+    test.matrixSubtractionTest(mat3(4), mat3(2.5), mat3(1.5));
     test.matrixProductTest(mat3(4), mat3(2.5), mat3(10));
     test.scalarProductTest(mat3(4), 2.5, mat3(10));
     test.scalarDivisionTest(mat3(4), 2, mat3(2));
