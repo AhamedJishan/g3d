@@ -1,7 +1,7 @@
 #pragma once
 
 #include "test.h"
-#include "g3d/vec3.h"
+#include "g3d/g3d.h"
 
 
 using namespace g3d;

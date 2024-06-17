@@ -99,6 +99,7 @@
     <ClCompile Include="src\test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\mat3_test.h" />
     <ClInclude Include="src\test.h" />
     <ClInclude Include="src\vec2_test.h" />
     <ClInclude Include="src\vec3_test.h" />

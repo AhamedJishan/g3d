@@ -14,12 +14,14 @@
   <ItemGroup>
     <ClInclude Include="include\g3d\vec2.h" />
     <ClInclude Include="include\g3d\vec3.h" />
-    <ClInclude Include="include\g3d\vec4.h" />
+    <ClInclude Include="include\g3d\mat3.h" />
+    <ClInclude Include="include\g3d\g3d.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\vec2.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="src\vec3.cpp" />
+    <ClCompile Include="src\mat3.cpp" />
   </ItemGroup>
 </Project>
